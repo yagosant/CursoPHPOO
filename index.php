@@ -6,19 +6,20 @@
     <title>Curso PHP OO</title>
 </head>
 <body>
+<pre>
     <?php
     //codigo PHP
    require_once 'Caneta.php';
-   
 
    $c1 = new Caneta;
-   $c1 -> cor = "Azul";
-   $c1 -> ponta = 0.5;
-   $c1 -> tampada = false;
-   
+   $c1 -> cor = "Vermelho";
+   $c1 -> modelo = "BIC";
 
+  
+    print_r($c1);
 
 
     ?>
+    </pre>
 </body>
 </html>

@@ -2,24 +2,29 @@
 <?php
 
 class Caneta{
-    var $modelo;
-    var $cor;
-    var $ponta;
-    var $carga;
-    var $tampada;
+    public $modelo;
+    public $cor;
+    private $ponta;
+    protected $carga;
+    protected $tampada;
 
     //funcao para verificar e esta tampada
-    function rabiscar(){
-
+   public function rabiscar(){
+        if($this->tampada == true){
+        echo "<p>Não posso rabiscar</p>";
+        }else{
+        echo "<p>Estou rabiscando</p>";
+        }
     }
 
     //funcao para tampar
-    function tampar(){
+   private function tampar(){
+        $this -> tampada = true;
 
     }
     //funcao para destampar
-    function destampar(){
-        
+  private function destampar(){
+        $this -> tampada = false;
     }
 }
 ?>
